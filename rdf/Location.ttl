@@ -28,7 +28,7 @@ asls:location
   dcterms:identifier "http://anzsoil.org/def/au/asls/location"^^xsd:anyURI ;
   dcterms:isFormatOf "<p>Chapter 3 <i>Location</i>, by L.J. Gregory, R.C. McDonald and R.F. Isbell, in <a href='https://www.publish.csiro.au/book/5230'>Australian soil and land survey field handbook (3rd edn)</a></p>"^^rdf:HTML ;
   dcterms:license <http://creativecommons.org/licences/by/4.0> ;
-  dcterms:modified "2021-04-09"^^xsd:date ;
+  dcterms:modified "2022-02-22"^^xsd:date ;
   dcterms:publisher <http://www.publish.csiro.au/> ;
   dcterms:rights "copyright CSIRO 2009, 2021. All rights reserved."@en ;
   dcterms:source "National Committee on Soil and Terrain (2009), 'Australian soil and land survey field handbook (3rd edn).' (CSIRO Publishing: Melbourne)"@en ;
