@@ -125,21 +125,25 @@ loc:datum
 .
 loc:datum-AGD66
   a skos:Concept ;
+  dcterms:identifier "http://anzsoil.org/def/au/asls/location/datum-AGD66"^^xsd:anyURI ;
   skos:notation "AGD66" ;
   skos:prefLabel "Australian Geodetic Datum 1966" ;
 .
 loc:datum-AGD84
   a skos:Concept ;
+  dcterms:identifier "http://anzsoil.org/def/au/asls/location/datum-AGD84"^^xsd:anyURI ;
   skos:notation "AGD84" ;
   skos:prefLabel "Australian Geodetic Datum 1984" ;
 .
 loc:datum-GDA94
   a skos:Concept ;
+  dcterms:identifier "http://anzsoil.org/def/au/asls/location/datum-GDA94"^^xsd:anyURI ;
   skos:notation "GDA94" ;
   skos:prefLabel "Geodetic Datum of Australia 1994" ;
 .
 loc:datum-WGS84
   a skos:Concept ;
+  dcterms:identifier "http://anzsoil.org/def/au/asls/location/datum-WGS84"^^xsd:anyURI ;
   skos:notation "WGS84" ;
   skos:prefLabel "World Geodetic SYstem 1984" ;
 .
