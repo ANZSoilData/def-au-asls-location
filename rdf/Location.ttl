@@ -260,8 +260,8 @@ loc:method-S
 .
 loc:observable-properties
   a skos:Collection ;
-  skos:member loc:gps-accuracy ;
-  skos:member loc:map-scale ;
+  skos:member <https://anzsoil.org/def/au/property/gps-accuracy> ;
+  skos:member <https://anzsoil.org/def/au/property/map-scale> ;
   skos:prefLabel "Observable properties of location" ;
 .
 loc:procedures
@@ -418,4 +418,12 @@ loc:topographic-map-sheet
   dcterms:identifier "http://anzsoil.org/def/au/asls/location/topographic-map-sheet"^^xsd:anyURI ;
   skos:definition "Give map sheet details regardless of the method used to obtain the coordinates. This will provide a cross-check for attribute accuracy. At scales larger than 1:100 000, use the numbering system for the State or Territory in which the survey is conducted."@en ;
   skos:prefLabel "Topographic map sheet"@en ;
+.
+<https://anzsoil.org/def/au/property/gps-accuracy>
+  a sosa:ObservableProperty ;
+  skos:prefLabel "GPS accuracy estimate"@en ;
+.
+<https://anzsoil.org/def/au/property/map-scale>
+  a sosa:ObservableProperty ;
+  skos:prefLabel "Map scale"@en ;
 .
