@@ -78,7 +78,7 @@ loc:accuracy-5
   skos:prefLabel ">30 m" ;
 .
 loc:air-photo-reference
-  a skos:Concept ;
+  a skos:Collection ;
   dcterms:identifier "http://anzsoil.org/def/au/asls/location/air-photo-reference"^^xsd:anyURI ;
   skos:definition """Give position of site on photo in millimetres east from western edge of the photo and north from southern edge. It is strongly recommended that the site should be marked on the air photo by pricking through the print and writing the site number on the back. 
 Film number
@@ -93,6 +93,10 @@ Give number of the individual photo.
 Site reference
 East (mm)
 North (mm)"""@en ;
+  skos:member loc:film-number ;
+  skos:member loc:frame-number ;
+  skos:member loc:run-number ;
+  skos:member loc:site-reference ;
   skos:prefLabel "Air photo reference"@en ;
 .
 loc:coordinates
@@ -156,6 +160,14 @@ Zone  Easting	Northing
 55	692084	6094905"""@en ;
   skos:prefLabel "Easting, northing, zone"@en ;
   skos:topConceptOf loc:coordinates ;
+.
+loc:film-number
+  a skos:Concept ;
+  skos:prefLabel "Film number on photo" ;
+.
+loc:frame-number
+  a skos:Concept ;
+  skos:prefLabel "number of individual photo" ;
 .
 loc:global-positioning-system
   a skos:Collection ;
@@ -232,7 +244,6 @@ Map scale	 8	7	6
 Map sheet number 	SH 50-15	8525	8727-III
 Map sheet name	Kellerberrin	Kosciuszko	Canberra."""@en ;
   skos:prefLabel "Map sheet"@en ;
-  skos:topConceptOf loc:topographic-map-sheet ;
 .
 loc:method-G
   a skos:Concept ;
@@ -264,15 +275,6 @@ loc:observable-properties
   skos:member <https://anzsoil.org/def/au/property/map-scale> ;
   skos:prefLabel "Observable properties of location" ;
 .
-loc:procedures
-  a skos:Collection ;
-  skos:member loc:gps-method-D ;
-  skos:member loc:gps-method-S ;
-  skos:member loc:method-G ;
-  skos:member loc:method-R ;
-  skos:member loc:method-S ;
-  skos:prefLabel "Procedures involved in location" ;
-.
 loc:projection
   a skos:Collection ;
   dcterms:identifier "http://anzsoil.org/def/au/asls/location/projection"^^xsd:anyURI ;
@@ -294,6 +296,10 @@ loc:projection-M
   skos:definition "Most topographic map sheets are projected onto the Universal Transverse Mercator (UTM) coordinate system. In Australia, this will be called the Australian Map Grid (AMG) or the Map Grid of Australia (MGA) depending on the datum used. The easting and northing coordinates taken from these sheets will have 6 digits and 7 digits respectively. The zone will also be required (49-56 in Australia). Do not use the Universal Grid Reference notation.3 " ;
   skos:notation "M" ;
   skos:prefLabel "Projected by Universal Transverse Mercator system" ;
+.
+loc:run-number
+  a skos:Concept ;
+  skos:prefLabel "number of run" ;
 .
 loc:scale-1
   a skos:Concept ;
@@ -342,6 +348,10 @@ loc:scale-8
   dcterms:identifier "http://anzsoil.org/def/au/asls/location/scale-8"^^xsd:anyURI ;
   skos:notation "8" ;
   skos:prefLabel "1:250 000" ;
+.
+loc:site-reference
+  a skos:Concept ;
+  skos:prefLabel "east (mm), north (mm)" ;
 .
 loc:state-or-territory
   a skos:Collection ;
@@ -417,13 +427,17 @@ loc:topographic-map-sheet
   a skos:Collection ;
   dcterms:identifier "http://anzsoil.org/def/au/asls/location/topographic-map-sheet"^^xsd:anyURI ;
   skos:definition "Give map sheet details regardless of the method used to obtain the coordinates. This will provide a cross-check for attribute accuracy. At scales larger than 1:100 000, use the numbering system for the State or Territory in which the survey is conducted."@en ;
+  skos:member loc:map-scale ;
+  skos:member loc:map-sheet ;
   skos:prefLabel "Topographic map sheet"@en ;
 .
 <https://anzsoil.org/def/au/property/gps-accuracy>
+  a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:prefLabel "GPS accuracy estimate"@en ;
 .
 <https://anzsoil.org/def/au/property/map-scale>
+  a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:prefLabel "Map scale"@en ;
 .
