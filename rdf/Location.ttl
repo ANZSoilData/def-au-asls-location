@@ -1,6 +1,6 @@
 # baseURI: http://anzsoil.org/def/au/asls/location
 # imports: http://purl.org/dc/elements/1.1/
-# imports: http://www.w3.org/ns/sosa/
+# imports: https://anzsoil.org/def/au/property
 
 @prefix asls: <http://anzsoil.org/def/au/asls/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -34,15 +34,16 @@ asls:location
   dcterms:identifier "http://anzsoil.org/def/au/asls/location"^^xsd:anyURI ;
   dcterms:isFormatOf <https://catalogue.nla.gov.au/Record/4273240> ;
   dcterms:license <http://creativecommons.org/licences/by/4.0> ;
-  dcterms:modified "2022-07-27"^^xsd:date ;
+  dcterms:modified "2022-07-29"^^xsd:date ;
   dcterms:publisher <http://www.publish.csiro.au/> ;
   dcterms:rights "copyright CSIRO 2009, 2021. All rights reserved."@en ;
   dcterms:source "National Committee on Soil and Terrain (2009), 'Australian soil and land survey field handbook (3rd edn).' (CSIRO Publishing: Melbourne)"@en ;
   dcterms:title "ASLS Location classifiers" ;
   rdfs:seeAlso <https://www.publish.csiro.au/book/5230> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports sosa: ;
+  owl:imports <https://anzsoil.org/def/au/property> ;
   skos:changeNote "2022-07-27 - relabel collections as XXX-enumeration" ;
+  skos:changeNote "2022-07-29 - replace `sosa:ObservableProperty` type on enumerations with `skos:related` link to the OP in the domain model" ;
   skos:editorialNote "<p>The data was converted from the print representation to this linked-data form by <a href='https://orcid.org/0000-0002-0693-1899'>Linda Gregory</a> and <a href='https://orcid.org/0000-0002-3884-3420'>Simon J D Cox</a></p>"^^rdf:HTML ;
   skos:prefLabel "ASLS Location classifiers" ;
 .
@@ -166,7 +167,6 @@ loc:global-positioning-system
 .
 loc:gps-accuracy
   a skos:Collection ;
-  a sosa:ObservableProperty ;
   dcterms:identifier "http://anzsoil.org/def/au/asls/location/gps-accuracy"^^xsd:anyURI ;
   skos:definition "GPS accuracy estimate"@en ;
   skos:member loc:accuracy-1 ;
@@ -175,6 +175,7 @@ loc:gps-accuracy
   skos:member loc:accuracy-4 ;
   skos:member loc:accuracy-5 ;
   skos:prefLabel "GPS accuracy estimate - enumeration"@en ;
+  skos:related <https://anzsoil.org/def/au/property/gps-accuracy> ;
 .
 loc:gps-method
   a skos:Collection ;
@@ -210,7 +211,6 @@ Latitude	Longitude
 .
 loc:map-scale
   a skos:Collection ;
-  a sosa:ObservableProperty ;
   dcterms:identifier "http://anzsoil.org/def/au/asls/location/map-scale"^^xsd:anyURI ;
   skos:definition "Map scale - enumeration"@en ;
   skos:member loc:scale-1 ;
@@ -222,6 +222,7 @@ loc:map-scale
   skos:member loc:scale-7 ;
   skos:member loc:scale-8 ;
   skos:prefLabel "Map scale - enumeration"@en ;
+  skos:related <https://anzsoil.org/def/au/property/map-scale> ;
 .
 loc:map-sheet
   a skos:Concept ;
