@@ -1,6 +1,5 @@
 # baseURI: http://anzsoil.org/def/au/asls/location
 # imports: http://purl.org/dc/elements/1.1/
-# imports: https://anzsoil.org/def/au/property
 
 @prefix asls: <http://anzsoil.org/def/au/asls/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -41,7 +40,6 @@ asls:location
   dcterms:title "ASLS Location classifiers" ;
   rdfs:seeAlso <https://www.publish.csiro.au/book/5230> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports <https://anzsoil.org/def/au/property> ;
   skos:changeNote "2022-07-27 - relabel collections as XXX-enumeration" ;
   skos:changeNote "2022-07-29 - replace `sosa:ObservableProperty` type on enumerations with `skos:related` link to the OP in the domain model" ;
   skos:editorialNote "<p>The data was converted from the print representation to this linked-data form by <a href='https://orcid.org/0000-0002-0693-1899'>Linda Gregory</a> and <a href='https://orcid.org/0000-0002-3884-3420'>Simon J D Cox</a></p>"^^rdf:HTML ;
